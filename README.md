@@ -83,19 +83,22 @@ terraform destroy
 
 ## Deployment
 
-### INPUTS
+## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| dns\_support | (Optional) Whether DNS support is enabled. Valid values: disable, enable. Default value: enable | `string` | `enable` | no |
-| ipv6\_support | (Optional) Whether IPv6 support is enabled. Valid values: disable, enable. Default value: disable | `string` | `disable` | no |
-| service\_type | (Required) Select Cloud-Connect Service type : `H2C` (FULL connectivity: On-Prem + InterVPC) or `ZPAOnly` (Only ZPA, no Inter VPC connectivity, no On-prem connectivity) | `string` | n/a | yes |
-| subnet\_ids | (Required) Identifiers of Subnets (Example: `subnet-xxxxxxxxxxxxxxxxx`) | `list(string)` | n/a | yes |
-| transit\_gateway | (Required) Select the environement of the Transit Gateway: `Prod`, `Preprod` or `Dev` | `string` | n/a | yes |
+| contact | n/a | `string` | n/a | yes |
+| dns\_support | (Optional) Whether DNS support is enabled. Valid values: disable, enable. Default value: enable | `string` | `"enable"` | no |
+| ipv6\_support | (Optional) Whether IPv6 support is enabled. Valid values: disable, enable. Default value: disable | `string` | `"disable"` | no |
+| subnet\_ids | (Required) Identifiers of Subnets (Example: subnet-xxxxxxxxxxxxxxxxx) | `list(string)` | n/a | yes |
+| tags | A map of tags | `map(string)` | n/a | yes |
+| transit\_gateway | (Required) Select the environement of the Transit Gateway: Prod, Preprod or Dev | `string` | n/a | yes |
+| transit\_gateway\_default\_route\_table\_association | (Optional) Boolean whether the VPC Attachment should be associated with the Transit Gateway association default route table. Default value: false | `string` | `false` | no |
+| transit\_gateway\_default\_route\_table\_propagation | (Optional) Boolean whether the VPC Attachment should propagate routes with the Transit Gateway propagation default route table. Default value: false | `string` | `false` | no |
 | vpc\_id | (Required) Identifier of the VPC to attach | `string` | n/a | yes |
-| vpc\_name | (Required) Provide the logical name of the VPC that will be attached to the transit gateway,format VPC-Name | `string` | `VPC-CLIENT` | yes |
+| vpc\_name | (Required) Provide the logical name of the VPC that will be attached to the transit gateway,format VPC-Name | `string` | `"VPC-CLIENT"` | no |
 
-### OUTPUTS
+## Outputs
 
 | Name | Description |
 |------|-------------|
