@@ -1,6 +1,6 @@
 # Terraform-module-TGW-attachment
 
-Manages a Transit Gateway VPC Attachment between a VPC (with one or more subnet(s) to select) or a VPN and a Transit Gateway from Engie BackBone.
+Manages a Transit Gateway VPC Attachment between a VPC (with one or more subnet(s) to select) or a VPN and a Transit Gateway.
 
 ## Getting Started
 
@@ -11,7 +11,6 @@ Call the module in directly from git or git clone in your working directory.
 Terraform > v.0.12
 ```
 ## How it works ?
-
 
 ## Usage
 
@@ -79,9 +78,6 @@ Don't forget to destroy the resources with terraform.
 ```
 terraform destroy
 ```
-
-
-## Deployment
 
 ## Inputs
 
