@@ -53,6 +53,10 @@ variable "vpc_name" {
   description = "(Required) Provide the logical name of the VPC that will be attached to the transit gateway,format VPC-Name"
 }
 
+variable "contact" {
+  type = string
+}
+
 variable "tags" {
     type = map(string)
     description = "A map of tags"
